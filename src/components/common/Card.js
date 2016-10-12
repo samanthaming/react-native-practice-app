@@ -9,6 +9,10 @@ const Card = (props) => {
   );
 };
 
+Card.propTypes = {
+  children: React.PropTypes.node,
+}
+
 const styles = {
   containerStyle: {
     borderWidth: 1,

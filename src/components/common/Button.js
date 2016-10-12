@@ -13,6 +13,11 @@ const Button = ({ onPress, children }) => {
   );
 };
 
+Button.prototype = {
+  onPress: React.PropTypes.func,
+  children: React.PropTypes.node,
+}
+
 const styles = {
   textStyle: {
     alignSelf: 'center',

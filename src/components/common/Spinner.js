@@ -9,6 +9,10 @@ const Spinner = ({ size }) => {
   );
 };
 
+Spinner.propTypes = {
+  size: React.PropTypes.string,
+}
+
 const styles = {
   spinnerStyle: {
     flex: 1,

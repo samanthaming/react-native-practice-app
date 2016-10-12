@@ -13,6 +13,10 @@ const Header = (props) => {
   );
 };
 
+Header.propTypes = {
+  headerText: React.PropTypes.string
+}
+
 const styles = {
   viewStyle: {
     backgroundColor: '#F8F8F8',
