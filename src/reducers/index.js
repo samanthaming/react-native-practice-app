@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import RepoReducer from './RepoReducer';
+import SelectionReducer from './SelectionReducer';
 
 export default combineReducers({
-  repos: RepoReducer,
+  selectedRepoId: SelectionReducer,
 });
