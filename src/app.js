@@ -6,6 +6,7 @@ import { createStore } from 'redux';
 import reducers from './reducers';
 import { Header } from './components/common';
 import UserCard from './components/UserCard';
+import RepoList from './components/RepoList';
 
 const GitPractice = () => {
   return (
@@ -13,6 +14,7 @@ const GitPractice = () => {
       <View style={{flex: 1}}>
         <Header headerText="Git Practice" />
         <UserCard />
+        <RepoList />
       </View>
     </Provider>
   );
