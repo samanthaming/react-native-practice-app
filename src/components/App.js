@@ -8,7 +8,7 @@ import RepoList from './RepoList';
 const GitPractice = () => {
   return (
       <View style={{flex: 1}}>
-        <Header headerText="Git Practice" />
+        <Header headerText="Github Practice" />
         <UserCardContainer />
         <RepoList />
       </View>
