@@ -1,38 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Text, Image } from 'react-native';
 import axios from 'axios';
 
 import { Card, CardSection } from './common';
 
-class UserCard extends Component {
-  state = {
-    user: {},
-  }
 
+class UserCard extends Component {
   componentWillMount() {
-    axios.get('https://api.github.com/users/samanthaming')
-      .then(response => this.setState({user: response.data}));
+    this.props.onGetUser('samanthaming');
   }
 
   render() {
-    // console.log('state', this.state);
-    const { user } = this.state;
-
     return(
       <Card>
         <CardSection>
-          <Text>{user.name}</Text>
+          <Text>{this.props.user.name}</Text>
         </CardSection>
 
         <CardSection>
           <Image
             style={styles.imageStyle}
-            source={{uri: user.avatar_url}}
-          />
+            source={{ uri: this.props.user.avatar_url }}
+            />
         </CardSection>
       </Card>
     );
   }
+}
+
+UserCard.propTypes = {
+  onGetUser: PropTypes.func.isRequired,
+  user: PropTypes.object.isRequired,
 }
 
 const styles = {
